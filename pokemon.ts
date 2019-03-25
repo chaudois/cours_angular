@@ -7,18 +7,17 @@ class Pokemon {
 	moves:any;
 	nextMove:any;
 	damages:any
-  constructor(name,speed, damages) {
+  constructor(name,speed, _moves) {
   	this.name=name;
   	this.speed=speed;
-  	this.damages=damages;
   	this.moves=new Map();
-  	/*for(let i in moves){
-  		this.moves.set(moves[i][0],moves[i][1]);
-
-  	}*/
+  	for(let i in _moves){
+  		this.moves.set(_moves[i][0],_moves[i][1]);
+  	}
   }
   attack(Pokemon):void{
-  	Pokemon.suffer(this.damages);
+    console.log('damages of '+this.name +':'+this.moves.get(this.nextMove));
+  	Pokemon.suffer(this.moves.get(this.nextMove));
   }
   suffer(damages):void{
   	this.hp=this.hp-damages
