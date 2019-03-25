@@ -1,0 +1,23 @@
+{
+  "name": "pokemon",
+  "version": "1.0.0",
+  "description": "cours angular TP 1 : pokemon",
+  "main": "TP_pokemon.js",
+  "scripts": {
+    "test": "tsc ./pokemon.ts ./pokemon_battle.ts & jest",
+    "build": "tsc ./pokemon.ts  ./pokemon_battle.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaudois/cours_angular.git"
+  },
+  "author": "chaudois",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaudois/cours_angular/issues"
+  },
+  "homepage": "https://github.com/chaudois/cours_angular#readme",
+  "dependencies": {
+    "jest": "^24.5.0"
+  }
+}
